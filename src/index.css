@@ -128,3 +128,33 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-size: min(max(1rem, 4vw), 22px);
+}
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: plum;
+  /* max-width: 1400px; */
+  margin: 0 auto;
+}
+
+body {
+  margin: 0px;
+}
