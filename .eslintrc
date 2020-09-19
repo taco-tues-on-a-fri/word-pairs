@@ -25,8 +25,13 @@
 	},
 	"ignorePatterns": ["webpack.config.js", "test-config/*"],
 	"rules": {
+    "padded-blocks": "off",
+    "no-param-reassign": "off",
+		"@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/semi": [ "error", "never" ],
     "arrow-body-style": "off",
     "eol-last": ["error", "never"],
+    "no-multiple-empty-lines": "off",
     "no-tabs": "off",
     "react-hooks/exhaustive-deps": "warn",
     "react/display-name": "off",
@@ -34,9 +39,7 @@
     "react/jsx-fragments": "off",
     "react/react-in-jsx-scope": "off",
     "semi": "off",
-    "spaced-comment": "off",
-		"@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/semi": [ "error", "never" ]
+    "spaced-comment": "off"
 	},
 	"settings": {
 		"react": {
