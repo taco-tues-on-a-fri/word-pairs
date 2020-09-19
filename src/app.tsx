@@ -1,4 +1,5 @@
 import React, { FC, lazy } from 'react'
+import './index.css'
 
 const MainPage = lazy(() => import('@components/Pages/MainPage/MainPage'))
 
