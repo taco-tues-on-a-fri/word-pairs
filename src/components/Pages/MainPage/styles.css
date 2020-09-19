@@ -19,3 +19,33 @@
   margin: auto;
   align-items: center;
 }
+
+.align-text {
+  text-align: center;
+}
+
+.center-planet {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #1da8a4;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.left-planet {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #9257ad;
+}
+
+.right-planet {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: yellow;
+}

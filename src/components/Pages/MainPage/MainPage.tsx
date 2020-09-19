@@ -45,6 +45,44 @@ const MyPlanet: FC = () =>  {
 	)
 }
 
+type Props = {
+  wordPair: string;
+}
+
+
+
+
+const WordPlanet: FC<Props> = ({ wordPair }) =>  {
+
+  const centerStyle = {
+    height: 200,
+    width: 200,
+    borderRadius: '50%',
+    backgroundColor: '#1da8a4',
+    textAlign: 'center'
+    
+  }
+	return (
+		<Planet
+      orbitRadius={160}
+			centerContent={
+				<div className="center-planet">
+          {wordPair}
+        </div>
+			}
+			open
+			autoClose
+		>
+			<div className="left-planet">
+        {wordPair}
+      </div>
+			<div className="right-planet">
+        {wordPair}
+      </div>
+		</Planet>
+	)
+}
+
 
 const MainPage: FC = () => {
   return (
@@ -53,7 +91,8 @@ const MainPage: FC = () => {
       <div>{generateRandomWordPair(shuffledAdjectives, shuffledNouns)}</div>
       <div className="flex-container">
         <div className="flex-column">
-          <MyPlanet />
+          {/* <MyPlanet /> */}
+          <WordPlanet wordPair={generateRandomWordPair(shuffledAdjectives, shuffledNouns)} />
         </div>
       </div>
     </div>

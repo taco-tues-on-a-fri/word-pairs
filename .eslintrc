@@ -53,6 +53,7 @@
     "react/jsx-filename-extension": "off",
     "react/jsx-fragments": "off",
     "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
     "semi": "off",
     "spaced-comment": "off"
   },
