@@ -1,22 +1,7 @@
-import React, { FC, Fragment } from 'react'
+import React, { FC } from 'react'
 import adjectivesJson from '@assets/words/adjectives.json'
 import nounsJson from '@assets/words/nouns.json'
-
-
-// type Props = {
-//   props?: any
-// }
-
-// const shuffleArrayV2 = function(array) {
-//   const a = array.slice();
-
-//   for (let i = a.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [a[i], a[j]] = [a[j], a[i]];
-//   }
-
-//   return a;
-// };
+import './styles.css'
 
 // Fischer-Yates Shuffle while loop
 const shuffleArray = (array: string[]) => {
