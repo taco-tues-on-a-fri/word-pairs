@@ -7,9 +7,7 @@
     "start": "webpack-dev-server --hot",
     "build": "cross-env NODE_ENV=production webpack",
     "lint": "npm run lint:ts",
-    "lint:ts": "eslint 'src/**/*.{ts,tsx}'",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "lint:ts": "eslint 'src/**/*.{ts,tsx}'"
   },
   "repository": {
     "type": "git",
