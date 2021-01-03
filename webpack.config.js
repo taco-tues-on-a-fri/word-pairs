@@ -65,6 +65,7 @@ const minifyConfig = {
   minifyURLs: true
 }
 
+console.log("isDevelopment===", isDevelopment)
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   entry: ['./src/index.tsx'],
@@ -109,7 +110,7 @@ module.exports = {
   devtool: isDevelopment ? 'eval-source-map' : false,
   devServer: {
     hot: true,
-    noInfo: true,
+    noInfo: false,
     contentBase: './dist',
     historyApiFallback: true
   },
