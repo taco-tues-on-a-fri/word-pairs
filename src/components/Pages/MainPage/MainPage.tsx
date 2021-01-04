@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import adjectivesJson from '@assets/words/adjectives.json'
 import nounsJson from '@assets/words/nouns.json'
 import './styles.css'
@@ -39,12 +39,44 @@ const generateRandomWordPair = () => {
   return randomPair.join(' ')
 }
 
+const WordCreator: FC = () => {
+  let keyCount = 0
+  const [generatedPairs, setGeneratedPairs] = useState([''])
+  
+  
+  const handleWordGeneration = () => {
+    setGeneratedPairs([
+      ...generatedPairs,
+      generateRandomWordPair()
+    ])
+  }
+  
+  return (
+    <div>
+      <button 
+        onClick={() => handleWordGeneration()}
+        type="button"
+      >
+        Create Pair
+      </button>
+      <ul>
+      { generatedPairs.map(item => {
+        return (
+          <li key={`${item}_${keyCount += 1}`}>{item}</li>
+          )
+      })}
+      </ul>
+    </div>
+
+  )
+}
 
 const MainPage: FC = () => {
   return (
     <div className="title">
       <div>Word Pairs</div>
       <div>{generateRandomWordPair()}</div>
+      <WordCreator />
     </div>
   )
 }

@@ -109,7 +109,7 @@ module.exports = {
   devtool: isDevelopment ? 'eval-source-map' : false,
   devServer: {
     hot: true,
-    noInfo: true,
+    noInfo: false,
     contentBase: './dist',
     historyApiFallback: true
   },
